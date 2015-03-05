@@ -1,5 +1,5 @@
-#ifndef _ar_ProfileUtil_h_
-#define _ar_ProfileUtil_h_
+#ifndef _ar_ProfileUs_h_
+#define _ar_ProfileUs_h_
 
 #include <sys/time.h>
 
@@ -45,7 +45,7 @@ void ar_##TITLE##_resetTimeCost() {                              \
         ar_##TITLE##_TimeCost[randint] += ar_##TITLE##_t2 - ar_##TITLE##_t1;
 #endif
 
-#endif // _ar_ProfileUtil_h_
+#endif // _ar_ProfileUs_h_
 
 /*
 

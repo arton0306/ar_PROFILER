@@ -1,3 +1,3 @@
 OPT:
 	g++ resolution.cpp -lrt -o res
-	g++ test.cpp test2.cpp -O3 -o test.out
+	g++ us.cpp us2.cpp -O3 -o us
