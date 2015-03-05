@@ -1,18 +1,22 @@
 #include <iostream>
-#include "ar_ProfileUtil.h"
+#include "ar_ProfileUtilEx.h"
 
 using namespace std;
-int main() {
-    ar_PROFILE_START;
-    int x = 0;
-    cin >> x;
-    int sum = 0;
-    for ( int i = 0; i < x && x > 0; ++i )
-        sum += i;
-    cout << sum << endl;
-    ar_PROFILE_STOP;
 
-    cout << ar_getTimeCostUs() << endl;
+ar_DECR_PROFILER(SUM)
+ar_DECR_PROFILER(COUNT)
+
+int mySum( int x );
+int myCount( int x );
+
+int main() {
+    int x,y;
+    cin >> x;
+    cout << mySum(x) << endl;
+    cout << myCount(x) << endl;
+
+    cout << "sum time cost: " << ar_getTimeCostUs(SUM) << endl;
+    cout << "count time cost: " << ar_getTimeCostUs(COUNT) << endl;
     
     return 0;
 }
